@@ -1,0 +1,38 @@
+/* ROUTE MAP */
+.infrastructure-map {
+    position: relative;
+}
+
+.infrastructure-map__select {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    z-index: 100;
+    max-width: 250px;
+}
+
+.infrastructure-map-select {
+    height: 30px;
+}
+
+.map-object {
+    text-align: center;
+}
+
+.map-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+
+.map-object>div {
+    margin-bottom: 10px;
+}
+
+.gm-style img {
+    max-width: none;
+    max-width: 250px;
+}
+
+/* / ROUTE MAP*/

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gMap</title>
+</head>
+<body>
+    
+
+<!-- карта -->
+<section class="b-section">
+    <div class="container">
+        <h2 class="h2 center">Карта маршрутов</h2>
+        <div class="infrastructure-map">
+            <div class="infrastructure-map__select">
+                <script>
+                    const exPoints = [{
+                        "id": "168",
+                        "pagetitle": "\u0417\u0430\u043f\u043e\u0432\u0435\u0434\u043d\u044b\u0439 \u0411\u0430\u0439\u043a\u0430\u043b",
+                        "tv_coord": "52.287054, 104.281047",
+                        "tv_foto": "",
+                        "title": "\u0417\u0430\u043f\u043e\u0432\u0435\u0434\u043d\u044b\u0439 \u0411\u0430\u0439\u043a\u0430\u043b",
+                        "url": "\/tury\/zapovednyj-bajkal",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/168\/1551955190_5-315x240-f4f.jpg"
+                    }, {
+                        "id": "251",
+                        "pagetitle": "\u0411\u0430\u0439\u043a\u0430\u043b\u044c\u0441\u043a\u0438\u0439 \u043e\u0442\u0440\u044b\u0432",
+                        "tv_coord": "53.128608, 106.998926",
+                        "tv_foto": "",
+                        "title": "\u0411\u0430\u0439\u043a\u0430\u043b\u044c\u0441\u043a\u0438\u0439 \u043e\u0442\u0440\u044b\u0432",
+                        "url": "\/tury\/bajkalskij-otryv",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/251\/d3-2-315x240-b03.jpg"
+                    }, {
+                        "id": "270",
+                        "pagetitle": "\u0422\u0443\u0440 \u00abBaikal fun\u00bb",
+                        "tv_coord": "53.167844, 107.373614",
+                        "tv_foto": "",
+                        "title": "\u0422\u0443\u0440 \u00abBaikal fun\u00bb",
+                        "url": "\/tury\/tur-baikal-fun",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/270\/bfun19-315x240-8fc.jpg"
+                    }, {
+                        "id": "165",
+                        "pagetitle": "\u041c\u043e\u0439 \u0411\u0430\u0439\u043a\u0430\u043b",
+                        "tv_coord": "51.859990, 104.863182",
+                        "tv_foto": "",
+                        "title": "\u041c\u043e\u0439 \u0411\u0430\u0439\u043a\u0430\u043b",
+                        "url": "\/tury\/moj-bajkal",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/165\/myb-47-315x240-974.jpg"
+                    }, {
+                        "id": "166",
+                        "pagetitle": "\u0411\u043e\u043b\u044c\u0448\u043e\u0435 \u043f\u0443\u0442\u0435\u0448\u0435\u0441\u0442\u0432\u0438\u0435 \u043f\u043e \u0411\u0430\u0439\u043a\u0430\u043b\u0443",
+                        "tv_coord": "51.859990, 104.863182",
+                        "tv_foto": "",
+                        "title": "\u0411\u043e\u043b\u044c\u0448\u043e\u0435 \u043f\u0443\u0442\u0435\u0448\u0435\u0441\u0442\u0432\u0438\u0435 \u043f\u043e \u0411\u0430\u0439\u043a\u0430\u043b\u0443",
+                        "url": "\/tury\/bolshoe-puteshestvie-po-bajkalu",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/166\/hodulnye-315x240-304.jpg"
+                    }, {
+                        "id": "167",
+                        "pagetitle": "\u041a\u0440\u0443\u0438\u0437\u043d\u0430\u044f \u044d\u0442\u043d\u043e\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u044d\u043a\u0441\u043f\u0435\u0434\u0438\u0446\u0438\u044f",
+                        "tv_coord": "53.167844, 107.373614",
+                        "tv_foto": "",
+                        "title": "\u041a\u0440\u0443\u0438\u0437\u043d\u0430\u044f \u044d\u0442\u043d\u043e\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u044d\u043a\u0441\u043f\u0435\u0434\u0438\u0446\u0438\u044f",
+                        "url": "\/tury\/kruiznaya-etnograficheskaya-ekspediciya",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/167\/etnokruz13-315x240-f71.jpg"
+                    }, {
+                        "id": "271",
+                        "pagetitle": "\u0424\u043e\u0442\u043e\u044d\u043a\u0441\u043f\u0435\u0434\u0438\u0446\u0438\u044f BAIKAL ICE",
+                        "tv_coord": "53.852398, 108.600982",
+                        "tv_foto": "",
+                        "title": "\u0424\u043e\u0442\u043e\u044d\u043a\u0441\u043f\u0435\u0434\u0438\u0446\u0438\u044f BAIKAL ICE",
+                        "url": "\/tury\/fotoekspediciya-baikal-ice",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/271\/14-315x240-21b.jpg"
+                    }, {
+                        "id": "272",
+                        "pagetitle": "\u0417\u0438\u043c\u043d\u0438\u0435 \u043f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0435",
+                        "tv_coord": "50.812778, 103.910348",
+                        "tv_foto": "",
+                        "title": "\u0417\u0438\u043c\u043d\u0438\u0435 \u043f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0435",
+                        "url": "\/tury\/zimnie-priklyucheniya-na-bajkale",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/272\/678-315x240-7d4.jpg"
+                    }, {
+                        "id": "273",
+                        "pagetitle": "\u0413\u043e\u0440\u043d\u044b\u0435 \u043b\u044b\u0436\u0438 \u0438 SPA \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0435",
+                        "tv_coord": "51.501599, 104.117697",
+                        "tv_foto": "",
+                        "title": "\u0413\u043e\u0440\u043d\u044b\u0435 \u043b\u044b\u0436\u0438 \u0438 SPA \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0435",
+                        "url": "\/tury\/gornye-lyzhi-i-spa-na-bajkale",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/273\/gorn8-315x240-765.jpg"
+                    }, {
+                        "id": "274",
+                        "pagetitle": "VIP \u0437\u0438\u043c\u0430 \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0435",
+                        "tv_coord": "55.038743, 109.107892",
+                        "tv_foto": "",
+                        "title": "VIP \u0437\u0438\u043c\u0430 \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0435",
+                        "url": "\/tury\/vip-zima-na-baikale",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/274\/img_7149-315x240-a4f.jpg"
+                    }, {
+                        "id": "275",
+                        "pagetitle": "\u041b\u0435\u0434\u043e\u0442\u0435\u0440\u0430\u043f\u0438\u044f",
+                        "tv_coord": "53.193450, 107.343646",
+                        "tv_foto": "",
+                        "title": "\u041b\u0435\u0434\u043e\u0442\u0435\u0440\u0430\u043f\u0438\u044f",
+                        "url": "\/tury\/ledoterapiya",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/275\/43-315x240-eb7.jpg"
+                    }, {
+                        "id": "276",
+                        "pagetitle": "\u0411\u0430\u0439\u043a\u0430\u043b \u0441 \u0432\u043e\u0441\u0442\u043e\u0447\u043d\u043e\u0439 \u0441\u0442\u043e\u0440\u043e\u043d\u044b",
+                        "tv_coord": "51.752546, 107.200427",
+                        "tv_foto": "",
+                        "title": "\u0411\u0430\u0439\u043a\u0430\u043b \u0441 \u0432\u043e\u0441\u0442\u043e\u0447\u043d\u043e\u0439 \u0441\u0442\u043e\u0440\u043e\u043d\u044b",
+                        "url": "\/tury\/bajkal-s-vostochnoj-storony",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/276\/d4-4-315x240-3d4.jpg"
+                    }, {
+                        "id": "277",
+                        "pagetitle": "\u041e\u0442\u0434\u044b\u0445 \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0435",
+                        "tv_coord": "53.203824, 107.338939",
+                        "tv_foto": "",
+                        "title": "\u041e\u0442\u0434\u044b\u0445 \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0435",
+                        "url": "\/tury\/otdyh-na-bajkale",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/277\/d6-6-315x240-d24.jpg"
+                    }, {
+                        "id": "278",
+                        "pagetitle": "\u0420\u044b\u0431\u0430\u043b\u043a\u0430 \u043d\u0430 \u0410\u043d\u0433\u0430\u0440\u0435",
+                        "tv_coord": "52.287054, 104.281047",
+                        "tv_foto": "",
+                        "title": "\u0420\u044b\u0431\u0430\u043b\u043a\u0430 \u043d\u0430 \u0410\u043d\u0433\u0430\u0440\u0435",
+                        "url": "\/tury\/rybalka-na-angare",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/278\/ribalka2-315x240-9d1.jpg"
+                    }, {
+                        "id": "279",
+                        "pagetitle": "\u042d\u0442\u043d\u043e-\u0442\u0443\u0440 \u043f\u043e \u0411\u0443\u0440\u044f\u0442\u0438\u0438 \u0438 \u0411\u0430\u0439\u043a\u0430\u043b\u0443",
+                        "tv_coord": "51.834464, 107.584574",
+                        "tv_foto": "",
+                        "title": "\u042d\u0442\u043d\u043e-\u0442\u0443\u0440 \u043f\u043e \u0411\u0443\u0440\u044f\u0442\u0438\u0438 \u0438 \u0411\u0430\u0439\u043a\u0430\u043b\u0443",
+                        "url": "\/tury\/etno-tur-po-buryatii-i-bajkalu",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/279\/view2-315x240-82d.jpg"
+                    }, {
+                        "id": "280",
+                        "pagetitle": "\u041e\u0441\u0435\u043d\u043d\u0438\u0439 \u0411\u0430\u0439\u043a\u0430\u043b",
+                        "tv_coord": "53.410625, 107.789507",
+                        "tv_foto": "",
+                        "title": "\u041e\u0441\u0435\u043d\u043d\u0438\u0439 \u0411\u0430\u0439\u043a\u0430\u043b",
+                        "url": "\/tury\/osennij-bajkal",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/280\/d6-4-315x240-d1d.jpg"
+                    }, {
+                        "id": "281",
+                        "pagetitle": "\u0411\u0430\u0439\u043a\u0430\u043b\u044c\u0441\u043a\u0438\u0439 \u043a\u043e\u0441\u0442\u0435\u0440",
+                        "tv_coord": "51.916605, 105.221780",
+                        "tv_foto": "",
+                        "title": "\u0411\u0430\u0439\u043a\u0430\u043b\u044c\u0441\u043a\u0438\u0439 \u043a\u043e\u0441\u0442\u0435\u0440",
+                        "url": "\/tury\/bajkalskij-koster",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/281\/bolsh3-315x240-0ed.jpg"
+                    }, {
+                        "id": "282",
+                        "pagetitle": "\u041a\u0440\u0443\u0438\u0437\u043d\u0430\u044f \u044d\u0442\u043d\u043e\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u044d\u043a\u0441\u043f\u0435\u0434\u0438\u0446\u0438\u044f",
+                        "tv_coord": "53.428334, 108.750246",
+                        "tv_foto": "",
+                        "title": "\u041a\u0440\u0443\u0438\u0437\u043d\u0430\u044f \u044d\u0442\u043d\u043e\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u044d\u043a\u0441\u043f\u0435\u0434\u0438\u0446\u0438\u044f",
+                        "url": "\/tury\/kruiznaya-etnograficheskaya-ekspediciya1",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/282\/etnokruz10-315x240-fbd.jpg"
+                    }, {
+                        "id": "283",
+                        "pagetitle": "\u0411\u0430\u0439\u043a\u0430\u043b\u044c\u0441\u043a\u0438\u0439 \u043e\u0442\u0440\u044b\u0432!",
+                        "tv_coord": "50.812778, 103.910348",
+                        "tv_foto": "",
+                        "title": "\u0411\u0430\u0439\u043a\u0430\u043b\u044c\u0441\u043a\u0438\u0439 \u043e\u0442\u0440\u044b\u0432!",
+                        "url": "\/tury\/bajkalskij-otryv1",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/283\/d3-9-315x240-cfa.jpg"
+                    }, {
+                        "id": "284",
+                        "pagetitle": "\u041a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u0442\u0443\u0440 \"\u041a\u043b\u0430\u0441\u0441\u0438\u043a\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0430\"",
+                        "tv_coord": "51.522821, 104.149928",
+                        "tv_foto": "",
+                        "title": "\u041a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u0442\u0443\u0440 \"\u041a\u043b\u0430\u0441\u0441\u0438\u043a\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0430\"",
+                        "url": "\/tury\/korporativnyj-tur-klassika-bajkala",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/284\/bolsh12-315x240-a1a.jpg"
+                    }, {
+                        "id": "285",
+                        "pagetitle": "\u0411\u0430\u0439\u043a\u0430\u043b\u044c\u0441\u043a\u0438\u0435 \u043f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
+                        "tv_coord": "51.859990, 104.863182",
+                        "tv_foto": "",
+                        "title": "\u0411\u0430\u0439\u043a\u0430\u043b\u044c\u0441\u043a\u0438\u0435 \u043f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f",
+                        "url": "\/tury\/bajkalskie-priklyucheniya",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/285\/bolsh4-315x240-c68.jpg"
+                    }, {
+                        "id": "286",
+                        "pagetitle": "\u0417\u043d\u0430\u043a\u043e\u043c\u0441\u0442\u0432\u043e \u0441 \u0411\u0430\u0439\u043a\u0430\u043b\u043e\u043c",
+                        "tv_coord": "53.269618, 107.314262",
+                        "tv_foto": "",
+                        "title": "\u0417\u043d\u0430\u043a\u043e\u043c\u0441\u0442\u0432\u043e \u0441 \u0411\u0430\u0439\u043a\u0430\u043b\u043e\u043c",
+                        "url": "\/tury\/znakomstvo-s-bajkalom",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/286\/most2-315x240-d7c.jpg"
+                    }, {
+                        "id": "287",
+                        "pagetitle": "\u0420\u043e\u043c\u0430\u043d\u0442\u0438\u043a\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0430",
+                        "tv_coord": "51.859990, 104.863182",
+                        "tv_foto": "",
+                        "title": "\u0420\u043e\u043c\u0430\u043d\u0442\u0438\u043a\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0430",
+                        "url": "\/tury\/romantika-bajkala",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/287\/ludi5-315x240-3a1.jpg"
+                    }, {
+                        "id": "288",
+                        "pagetitle": "\u0422\u0443\u0440 \u0434\u043b\u044f \u0434\u0435\u0442\u0435\u0439 \"\u0411\u0430\u0439\u043a\u0430\u043b \u044d\u043a\u0441\u043f\u0435\u0441\u0441\"",
+                        "tv_coord": "51.859990, 104.863182",
+                        "tv_foto": "",
+                        "title": "\u0422\u0443\u0440 \u0434\u043b\u044f \u0434\u0435\u0442\u0435\u0439 \"\u0411\u0430\u0439\u043a\u0430\u043b \u044d\u043a\u0441\u043f\u0435\u0441\u0441\"",
+                        "url": "\/tury\/tur-dlya-detej-bajkal-ekspess",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/288\/bereg5-315x240-a44.jpg"
+                    }, {
+                        "id": "289",
+                        "pagetitle": "\u0422\u0443\u0440 \u0432\u044b\u0445\u043e\u0434\u043d\u043e\u0433\u043e \u0434\u043d\u044f \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b \u0434\u043b\u044f \u0448\u043a\u043e\u043b\u044c\u043d\u0438\u043a\u043e\u0432",
+                        "tv_coord": "51.859990, 104.863182",
+                        "tv_foto": "",
+                        "title": "\u0422\u0443\u0440 \u0432\u044b\u0445\u043e\u0434\u043d\u043e\u0433\u043e \u0434\u043d\u044f \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b \u0434\u043b\u044f \u0448\u043a\u043e\u043b\u044c\u043d\u0438\u043a\u043e\u0432",
+                        "url": "\/tury\/tur-vyhodnogo-dnya-na-bajkal-dlya-shkolnikov",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/289\/kost2-315x240-9d7.jpg"
+                    }, {
+                        "id": "290",
+                        "pagetitle": "\u0421\u043d\u0435\u0436\u043d\u044b\u0435 \u0432\u044b\u0445\u043e\u0434\u043d\u044b\u0435 \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0435",
+                        "tv_coord": "51.859990, 104.863182",
+                        "tv_foto": "",
+                        "title": "\u0421\u043d\u0435\u0436\u043d\u044b\u0435 \u0432\u044b\u0445\u043e\u0434\u043d\u044b\u0435 \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0435",
+                        "url": "\/tury\/snezhnye-vyhodnye-na-bajkale",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/290\/1089108510771078108510991077_10741099109310861076108510991077_12-315x240-dbe.jpg"
+                    }, {
+                        "id": "291",
+                        "pagetitle": "\u042d\u0442\u043d\u043e-\u0442\u0443\u0440 \u0434\u043b\u044f \u0448\u043a\u043e\u043b\u044c\u043d\u0438\u043a\u043e\u0432 \"\u0417\u0438\u043c\u043d\u0435\u0435 \u0441\u043e\u043b\u043d\u0446\u0435 \u0411\u0443\u0440\u044f\u0442\u0438\u0438\"",
+                        "tv_coord": "51.834464, 107.584574",
+                        "tv_foto": "",
+                        "title": "\u042d\u0442\u043d\u043e-\u0442\u0443\u0440 \u0434\u043b\u044f \u0448\u043a\u043e\u043b\u044c\u043d\u0438\u043a\u043e\u0432 \"\u0417\u0438\u043c\u043d\u0435\u0435 \u0441\u043e\u043b\u043d\u0446\u0435 \u0411\u0443\u0440\u044f\u0442\u0438\u0438\"",
+                        "url": "\/tury\/etno-tur-dlya-shkolnikov-zimnee-solnce-buryatii",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/291\/107910801084108511031103_1041109110881103109010801103_33-315x240-c69.jpg"
+                    }, {
+                        "id": "292",
+                        "pagetitle": "\u0417\u0438\u043c\u043d\u0438\u0439 \u0411\u0430\u0439\u043a\u0430\u043b 2021",
+                        "tv_coord": "51.656501, 103.71884",
+                        "tv_foto": "",
+                        "title": "\u0417\u0438\u043c\u043d\u0438\u0439 \u0411\u0430\u0439\u043a\u0430\u043b 2021",
+                        "url": "\/tury\/zimnij-bajkal-2021",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/292\/img_2129-315x240-707.jpg"
+                    }, {
+                        "id": "293",
+                        "pagetitle": "\u041c\u0430\u0440\u0442\u043e\u0432\u0441\u043a\u0438\u0435 \u043a\u0430\u043d\u0438\u043a\u0443\u043b\u044b \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0435",
+                        "tv_coord": "53.269618, 107.314262",
+                        "tv_foto": "",
+                        "title": "\u041c\u0430\u0440\u0442\u043e\u0432\u0441\u043a\u0438\u0435 \u043a\u0430\u043d\u0438\u043a\u0443\u043b\u044b \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0435",
+                        "url": "\/tury\/martovskie-kanikuly-na-bajkale",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/293\/r_6-315x240-9fd.jpg"
+                    }, {
+                        "id": "294",
+                        "pagetitle": "\u041e\u0441\u0435\u043d\u043d\u0438\u0435 \u043a\u0430\u043d\u0438\u043a\u0443\u043b\u044b \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0435",
+                        "tv_coord": "51.859990, 104.863182",
+                        "tv_foto": "",
+                        "title": "\u041e\u0441\u0435\u043d\u043d\u0438\u0435 \u043a\u0430\u043d\u0438\u043a\u0443\u043b\u044b \u043d\u0430 \u0411\u0430\u0439\u043a\u0430\u043b\u0435",
+                        "url": "\/tury\/osennie-kanikuly-na-bajkale-5-dnej",
+                        "foto": "assets\/cache\/images\/assets\/galleries\/294\/oskan11-315x240-15c.jpg"
+                    }]
+                </script>
+                
+                <select class="infrastructure-map-select" data-apply-js="select">
+                    <option value="">Выбрать маршрут</option>
+                    <option value="tour168">Заповедный Байкал</option>
+                    <option value="tour251">Байкальский отрыв</option>
+                    <option value="tour270">Тур «Baikal fun»</option>
+                    <option value="tour165">Мой Байкал</option>
+                    <option value="tour166">Большое путешествие по Байкалу</option>
+                    <option value="tour167">Круизная этнографическая экспедиция</option>
+                    <option value="tour271">Фотоэкспедиция BAIKAL ICE</option>
+                    <option value="tour272">Зимние приключения на Байкале</option>
+                    <option value="tour273">Горные лыжи и SPA на Байкале</option>
+                    <option value="tour274">VIP зима на Байкале</option>
+                    <option value="tour275">Ледотерапия</option>
+                    <option value="tour276">Байкал с восточной стороны</option>
+                    <option value="tour277">Отдых на Байкале</option>
+                    <option value="tour278">Рыбалка на Ангаре</option>
+                    <option value="tour279">Этно-тур по Бурятии и Байкалу</option>
+                    <option value="tour280">Осенний Байкал</option>
+                    <option value="tour281">Байкальский костер</option>
+                    <option value="tour282">Круизная этнографическая экспедиция</option>
+                    <option value="tour283">Байкальский отрыв!</option>
+                    <option value="tour284">Корпоративный тур "Классика Байкала"</option>
+                    <option value="tour285">Байкальские приключения</option>
+                    <option value="tour286">Знакомство с Байкалом</option>
+                    <option value="tour287">Романтика Байкала</option>
+                    <option value="tour288">Тур для детей "Байкал экспесс"</option>
+                    <option value="tour289">Тур выходного дня на Байкал для школьников</option>
+                    <option value="tour290">Снежные выходные на Байкале</option>
+                    <option value="tour291">Этно-тур для школьников "Зимнее солнце Бурятии"</option>
+                    <option value="tour292">Зимний Байкал 2021</option>
+                    <option value="tour293">Мартовские каникулы на Байкале</option>
+                    <option value="tour294">Осенние каникулы на Байкале</option>
+                </select>
+            </div>
+            <div id="gmap" class="bx-google-map" style="height: 630px; width: 100%;">загрузка карты...</div>
+        </div>
+    </div>
+</section>
+<!-- /карта -->
+
+<style>
+
+
+</style>
+<link rel="stylesheet" href="template/css/gmappoints.css">
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyA-YCru2ymKXNafKK3rgEGv0u6twlEmpaM&language=ru" charset="utf-8"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="/template/js/gmappoints.js"></script>
+
+</body>
+</html>
